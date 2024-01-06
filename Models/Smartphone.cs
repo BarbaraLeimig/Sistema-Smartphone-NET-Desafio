@@ -4,10 +4,25 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         // Propriedades da classe abstrada Smartphone
+        private string _modelo;
+        private string _imei;
+        private int _memoria;
         public string Numero { get; set; }
-        private string Modelo { get; set; }
-        private string IMEI { get; set; }
-        private int Memoria { get; set; }
+        public string Modelo
+        {
+            get => _modelo;
+            set => _modelo = value;
+        }
+        public string IMEI
+        {
+            get => _imei;
+            set => _imei = value;
+        }
+        public int Memoria
+        {
+            get => _memoria;
+            set => _memoria = value;
+        }
 
         // Construtor da classe abstrata Smartphone, que será herdado pelas classes filhas
         public Smartphone(string numero, string modelo, string imei, int memoria)
