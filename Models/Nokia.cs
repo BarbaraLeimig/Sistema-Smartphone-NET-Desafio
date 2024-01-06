@@ -9,7 +9,7 @@ namespace DesafioPOO.Models
         // Impementação do método abstrato
         public override void InstalarAplicativo(string nomeApp)
         {
-            Console.WriteLine($"Instalando o aplicativo {nomeApp} no aparelho telefônico Nokia");
+            Console.WriteLine($"Instalando o aplicativo {nomeApp} no aparelho telefônico Nokia.");
         }
     }
 }
