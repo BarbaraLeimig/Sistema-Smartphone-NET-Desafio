@@ -1,14 +1,21 @@
 namespace DesafioPOO.Models
 {
+    // 'abstract' significa que esta classe não pode ser instanciada diretamente
     public abstract class Smartphone
     {
+        // Propriedades da classe abstrada Smartphone
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        private string Modelo { get; set; }
+        private string IMEI { get; set; }
+        private int Memoria { get; set; }
 
-        public Smartphone(string numero)
+        // Construtor da classe abstrata Smartphone, que será herdado pelas classes filhas
+        public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Modelo = modelo;
+            IMEI = imei;
+            Memoria = memoria;
         }
 
         public void Ligar()
@@ -21,6 +28,7 @@ namespace DesafioPOO.Models
             Console.WriteLine("Recebendo ligação...");
         }
 
+        // Método abstrato que será herdado pelas classes filhas
         public abstract void InstalarAplicativo(string nomeApp);
     }
 }
